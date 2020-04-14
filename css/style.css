@@ -1,37 +1,96 @@
 body{
     background-color: green;
+    margin: 0;
+    padding: 0;
 }
 
 .card{
     height: 400px;
     width: 300px;
     background-color:#ffff;
-    margin: 20px auto;/*con auto centro el card*/
+    margin: 0 auto;/*con auto centro el card*/
     border-radius: 10px;
 }
 
-.card .card-header{
-    background-color:white;
-    max-height: 20%;
-    max-width: 100%;
-    display: block;
-}
-#corazon {
-    width: 60px;
-  }
-
 #numero {
-    font-size: 150px;
+    font-size: 100px;
     text-align: center;
+    padding-top: 10%;
+    padding-right: 10%;
+    color: black;
   }
 
-#diamante {
-    width: 60px;
-  }
 
-.card .card-footer{
-    background-color:white;
-    height: 20%;
-    width: 100%;
-    display: block;
+/*
+    spade    = \2660
+    cubs     = \2663
+    hearts   = \2665
+    diamonds = \2666
+*/
+
+.card .corazon::before{
+  content: '\2665';
+  width: 100%;
+  display: block;
+  text-align: left;
+  padding-left: 10px;
+  color: red;
+}
+.card .corazon::after{
+  content: '\2665';
+  width: 100%;
+  display: block;
+  text-align: right;
+  padding-left: 10px;
+  color: red;
+  
+}
+.card .trebol::before{
+  content: '\2663';
+  width: 100%;
+  display: block;
+  text-align: left;
+  padding-left: 10px;
+  color: black;
+}
+.card .trebol::after{
+  content: '\2663';
+  width: 100%;
+  display: block;
+  text-align: right;
+  padding-left: 10px;
+  color: black;
+}
+.card .espada::before{
+  content: '\2660';
+  width: 100%;
+  display: block;
+  text-align: left;
+  padding-left: 10px;
+  color: black;
+}
+.card .espada::after{
+  content: '\2660';
+  width: 100%;
+  display: block;
+  text-align: right;
+  padding-left: 10px;
+  color: black;
+}
+.card .diamante::before{
+  content: '\2666';
+  width: 100%;
+  display: block;
+  text-align: left;
+  padding-left: 10px;
+  color: red;
+}
+.card .diamante::after{
+  content: '\2666';
+  width: 100%;
+  display: block;
+  text-align: right;
+  padding-left: 10px;
+  color: red;
+  
 }
